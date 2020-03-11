@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DecaratorBehaviour" Collapsed="true">
+    <Position X="15.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviour.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircleComponent" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAACIAAAAAAAAA=</HashCode>
+      <FileName>CircleComponent.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Component" Collapsed="true">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIIACAAgIgACAAAAQAAACCAAgAQACIABAAAAABAA=</HashCode>
+      <FileName>Component.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Container" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQABAAAAAAAAAAECAKAAAACIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Container.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IBounds" Collapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IBounds.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IComponent" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IComponent.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IGaps" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAIAAAAQA=</HashCode>
+      <FileName>IGaps.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NoGaps" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>IGaps.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gaps" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAABAAAAAAAAgAAAAoAAAAAAAAAAAAgQA=</HashCode>
+      <FileName>IGaps.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdapterTransformable&lt;Adaptee&gt;" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITransformable.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Layout" Collapsed="true">
+    <Position X="3" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAgAAAAAAAAAEAAAAAAAIAAEAAAAAAAA=</HashCode>
+      <FileName>Layout.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LayoutManager" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAEAAAAAAAAAIEAACAAAAAAAAAIAAA=</HashCode>
+      <FileName>LayoutManager.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeftToRightAdding" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>LeftToRightAdding.hpp</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RectangleComponent" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAgAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RectangleComponent.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shape" Collapsed="true">
+    <Position X="3" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shape.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShapeLess" Collapsed="true">
+    <Position X="0.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shape.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rectangle" Collapsed="true">
+    <Position X="3" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABIAAAAgAAAAAAAAAAAAgAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Shape.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Circle" Collapsed="true">
+    <Position X="5.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAIAAAAAAAAAAAAAAgAAAAACIAAAAAAAAA=</HashCode>
+      <FileName>Shape.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Transformable" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIAAADgAkCAAAAAAAAACCAAgAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Transformable.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CircleAdding" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAIEAAAAAAAAAAAAAAAAAAACIAAAABAAAA=</HashCode>
+      <FileName>CircleBehaviour.hpp</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="RandomAdding" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAEAAAAAAAAAAACAAABIAAA=</HashCode>
+      <FileName>RandomBehaviour.hpp</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Struct Name="DefaultBehaviour" Collapsed="true">
+    <Position X="12.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Behaviour.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IReadTransformable" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIAAAAAAgAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITransformable.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="IWriteTransformable" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAACCAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>ITransformable.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ITransformable" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ITransformable.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Rect&lt;T&gt;" Collapsed="true">
+    <Position X="18.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQAAAIAhAACAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rect.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="RelativeAdding" Collapsed="true">
+    <Position X="11.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RelativeBehaviour.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="RelativeRemove" Collapsed="true">
+    <Position X="13.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RelativeBehaviour.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Vector2&lt;T&gt;" Collapsed="true">
+    <Position X="20" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAARAAAAAEAAAQAAAAAAAAAAAEBgAAAAAAA=</HashCode>
+      <FileName>Vector2.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Behaviour" Collapsed="true">
+    <Position X="11.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Behaviour.hpp</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AddingBehaviour" Collapsed="true">
+    <Position X="6.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviour.hpp</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="RemoveBehaviour" Collapsed="true">
+    <Position X="9" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Behaviour.hpp</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
