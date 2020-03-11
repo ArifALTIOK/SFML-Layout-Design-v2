@@ -1,14 +1,14 @@
 #pragma once
 #include "Rect.hpp"
 
-struct IReadTransformable {
+__interface IReadTransformable {
 	virtual Vector2f getPosition()const = 0;
 	virtual Vector2f getOrigin()const = 0;
 	virtual Vector2f getScale()const = 0;
 	virtual float getRotation()const = 0;
 };
 
-struct IWriteTransformable {
+__interface IWriteTransformable {
 	virtual void setPosition(const Vector2f&) = 0;
 	virtual void setOrigin(const Vector2f&) = 0;
 	virtual void setScale(const Vector2f&) = 0;
@@ -16,7 +16,7 @@ struct IWriteTransformable {
 };
 
 
-struct ITransformable : IReadTransformable, IWriteTransformable {
+__interface ITransformable : IReadTransformable, IWriteTransformable {
 	
 };
 

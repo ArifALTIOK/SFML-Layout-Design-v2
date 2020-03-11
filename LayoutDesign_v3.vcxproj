@@ -119,6 +119,8 @@
     <ClCompile Include="CircleComponent.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Container.cpp" />
+    <ClCompile Include="DecaratorBehaviour.cpp" />
+    <ClCompile Include="HorizontalBorder.cpp" />
     <ClCompile Include="IGaps.cpp" />
     <ClCompile Include="Layout.cpp" />
     <ClCompile Include="LayoutManager.cpp" />
@@ -127,14 +129,19 @@
     <ClCompile Include="RandomBehaviour.cpp" />
     <ClCompile Include="RectangleComponent.cpp" />
     <ClCompile Include="Shape.cpp" />
+    <ClCompile Include="TopToBottomBehaviour.cpp" />
     <ClCompile Include="Transformable.cpp" />
+    <ClCompile Include="VerticalBorder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Behaviour.hpp" />
+    <ClInclude Include="BorderBehaviour.hpp" />
     <ClInclude Include="CircleBehaviour.hpp" />
     <ClInclude Include="CircleComponent.hpp" />
     <ClInclude Include="Component.hpp" />
     <ClInclude Include="Container.hpp" />
+    <ClInclude Include="DecaratorBehaviour.hpp" />
+    <ClInclude Include="HorizontalBorder.hpp" />
     <ClInclude Include="IBounds.hpp" />
     <ClInclude Include="IComponent.hpp" />
     <ClInclude Include="IGaps.hpp" />
@@ -147,8 +154,13 @@
     <ClInclude Include="RectangleComponent.hpp" />
     <ClInclude Include="RelativeBehaviour.hpp" />
     <ClInclude Include="Shape.hpp" />
+    <ClInclude Include="TopToBottomBehaviour.hpp" />
     <ClInclude Include="Transformable.hpp" />
     <ClInclude Include="Vector2.hpp" />
+    <ClInclude Include="VerticalBorder.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,27 +1,31 @@
 #pragma once
+
+#ifndef min 
+#define min(x,y) x<y?x:y;
+#endif
+
+#ifndef max
+#define max(x,y) x<y?x:y;
+#endif
+
+#include <vector>
 class Component;
 class Container;
-__interface Behaviour {
+__interface IBehaviour
+{
 	Component* task(const Container* container, Component* component);
 };
 
-struct AddingBehaviour : Behaviour {	};
+class Behaviour : public IBehaviour{	};
 
-struct RemoveBehaviour : Behaviour {	};
+class AddingBehaviour : public Behaviour {	};
 
-struct DefaultBehaviour : Behaviour {
+class RemoveBehaviour : public Behaviour {	};
+
+class DefaultBehaviour : public Behaviour {
+public:
 	Component* task(const Container* container, Component* component) {
 		return component;
 	}
 };
 
-class DecaratorBehaviour : public Behaviour {
-protected:
-	Behaviour* behaviour;
-public:
-	DecaratorBehaviour(
-		Behaviour* behaviour
-	) :
-		behaviour(behaviour)
-	{	}
-};

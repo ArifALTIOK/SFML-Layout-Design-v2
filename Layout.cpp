@@ -3,10 +3,13 @@
 Layout::Layout() : manager(0) {}
 
 Layout::Layout(
-	LayoutManager* manager
+	LayoutManager* manager,
+	float x,
+	float y
 ) :
 	Layout()
 {
+	preferredSize = Vector2f(x, y);
 	setLayoutManager(manager);
 }
 

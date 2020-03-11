@@ -3,10 +3,13 @@
 class LayoutManager;
 class Layout : public Container {
 	LayoutManager* manager;
+	Vector2f preferredSize;
 public:
-	Layout();
+	Layout(	);
 	Layout(
-		LayoutManager* manager
+		LayoutManager* manager,
+		float x = 0,
+		float y = 0
 	);
 
 	void setLayoutManager(LayoutManager* manager);
@@ -14,4 +17,8 @@ public:
 	void addLayoutComponent(Component* component);
 
 	void removeLayoutComponent(Component* component);
+
+	Vector2f getPreferredSize()const {
+		return preferredSize;
+	}
 };

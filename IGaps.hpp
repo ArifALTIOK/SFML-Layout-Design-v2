@@ -34,11 +34,11 @@ public:
 		bottom(bottom)
 	{	}
 
-	Vector2f getHorizontalGaps()const {
+	Vector2f getLeftTopGaps()const {
 		return Vector2f(left, right);
 	}
 
-	Vector2f getVerticalGaps()const {
+	Vector2f getRightBottomGaps()const {
 		return Vector2f(top, bottom);
 	}
 };

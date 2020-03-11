@@ -22,11 +22,13 @@ void LayoutManager::addContainerComponent(Container& container, Component* compo
 }
 
 void LayoutManager::addContainerComponent(Container* container, Component* component) {
-	Component* result = adding->task(container, component);
-	if (result) {
-		container->addComponent(result);
+	if (component) {
+		Component* result = adding->task(container, component);
+		if (result) {
+			container->addComponent(result);
+		}
 	}
-	cout << container->getComponentCount() << endl;
+	//else throw NullPointerException
 }
 
 void LayoutManager::removeContainerComponent(Container& container, Component* component) {
@@ -34,9 +36,11 @@ void LayoutManager::removeContainerComponent(Container& container, Component* co
 }
 
 void LayoutManager::removeContainerComponent(Container* container, Component* component) {
-	Component* result = remove->task(container, component);
-	if (result) {
-		container->removeComponent(component);
+	if (component) {
+		Component* result = remove->task(container, component);
+		if (result) {
+			container->removeComponent(component);
+		}
 	}
-	cout << container->getComponentCount() << endl;
+	//else throw NullPointerException
 }
