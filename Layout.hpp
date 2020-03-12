@@ -5,11 +5,15 @@ class Layout : public Container {
 	LayoutManager* manager;
 	Vector2f preferredSize;
 public:
-	Layout();
 	Layout(
-		LayoutManager* manager,
+		Vector2f size,
+		LayoutManager* manager = NULL
+	);
+
+	Layout(
 		float x = 0,
-		float y = 0
+		float y = 0,
+		LayoutManager* manager = NULL
 	);
 
 	void setLayoutManager(LayoutManager* manager);
@@ -17,8 +21,6 @@ public:
 	void addLayoutComponent(Component* component);
 
 	void removeLayoutComponent(Component* component);
-
-	void rotateAllComponent(float angle);
 
 	Vector2f getPreferredSize()const {
 		return preferredSize;

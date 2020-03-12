@@ -1,17 +1,23 @@
 #include "Layout.hpp"
 #include "LayoutManager.hpp"
-Layout::Layout() : manager(0) {}
 
 Layout::Layout(
-	LayoutManager* manager,
-	float x,
-	float y
-) :
-	Layout()
+	Vector2f size,
+	LayoutManager* manager
+) : 
+	manager(NULL)
 {
-	preferredSize = Vector2f(x, y);
+	preferredSize = size;
 	setLayoutManager(manager);
 }
+
+Layout::Layout(
+	float x,
+	float y,
+	LayoutManager* manager
+) : 
+	Layout(Vector2f(x,y),manager)
+{	}
 
 void Layout::setLayoutManager(LayoutManager* manager) {
 	if (this->manager)
@@ -27,9 +33,3 @@ void Layout::removeLayoutComponent(Component* component) {
 	manager->removeContainerComponent(this, component);
 }
 
-void Layout::rotateAllComponent(float angle)
-{
-	size_t nComp = getComponentCount();
-	for (size_t i = 0; i < nComp; i++)
-		getComponent(i)->rotate(angle);
-}

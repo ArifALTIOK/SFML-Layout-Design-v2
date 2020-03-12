@@ -2,6 +2,7 @@
 #include "Component.hpp"
 #include <vector>
 #include <iostream>
+#include <functional>
 using namespace std;
 
 class LayoutManager;
@@ -37,4 +38,27 @@ public:
 	virtual Vector2f getPreferredSize()const;
 	
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
+
+	
+	void foreach(std::function<void(Component*)> function);
+	template<typename Retval>
+	Retval foreach(std::function<Retval(Component*)> function);
 };
+
+
+inline void Container::foreach(std::function<void(Component*)> function)
+{
+	for (Component* c : components) {
+		function(c);
+	}
+}
+
+template<typename Retval>
+inline Retval Container::foreach(std::function<Retval(Component*)> function)
+{
+	Retval retval;
+	for (Component* c : components) {
+		retval = function(c);
+	}
+	return retval;
+}

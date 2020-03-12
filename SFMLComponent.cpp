@@ -6,6 +6,11 @@
 #include <SFML/Graphics/RenderStates.hpp>
 
 
+SFMLComponent::SFMLComponent(
+	sf::Shape* shape
+) :
+	SFMLComponent(*shape)
+{	}
 
 SFMLComponent::SFMLComponent(
 	sf::Shape& shape

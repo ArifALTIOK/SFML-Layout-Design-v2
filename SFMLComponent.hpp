@@ -9,7 +9,9 @@ namespace sf {
 
 class SFMLComponent : public AdapterComponent<sf::Shape&> {
 public:
-
+	SFMLComponent(
+		sf::Shape* shape
+	);
 	SFMLComponent(
 		sf::Shape& shape
 	);

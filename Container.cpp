@@ -1,17 +1,17 @@
 #include "Container.hpp"
 #include <SFML/Graphics/RenderTarget.hpp>
 void Container::addComponent(Component* component) {
-	cout << __FUNCSIG__ << endl;
+	//cout << __FUNCSIG__ << endl;
 	addComponent(component, getComponentCount());
 }
 
 void Container::addComponent(Component* component, size_t n) {
-	cout << __FUNCSIG__ << endl;
+	//cout << __FUNCSIG__ << endl;
 	components.insert(components.begin() + n, component);
 }
 
 void Container::removeComponent(size_t n) {
-	cout << __FUNCSIG__ << endl;
+	//cout << __FUNCSIG__ << endl;
 	if (n < getComponentCount()) {
 		Component* c = components[n];
 		delete c;
@@ -20,7 +20,7 @@ void Container::removeComponent(size_t n) {
 }
 
 void Container::removeComponent(Component* component) {
-	cout << __FUNCSIG__ << endl;
+	//cout << __FUNCSIG__ << endl;
 	size_t nComp = getComponentCount();
 	for (int i = 0; i < nComp; i++) {
 		if (components[i] == component)
@@ -45,9 +45,9 @@ const Component* Container::getComponent(size_t n)const {
 
 void Container::setPosition(const Vector2f& position) {
 	Vector2f diff = position - getPosition();
-	for (Component* c : components) {
-		c->move(diff);
-	}
+	foreach([&](Component* c) {
+		c->setPosition(c->getPosition() + diff);
+	});
 	Component::setPosition(position);
 }
 void Container::print()const {
