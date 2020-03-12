@@ -11,6 +11,7 @@ public:
 	Component* task(const Container* container, Component* component);
 
 	FloatRect getRange()const;
+
 	void setRange(const FloatRect& range);
 };
 

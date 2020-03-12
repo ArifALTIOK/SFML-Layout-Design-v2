@@ -1,18 +1,15 @@
 #include "RandomBehaviour.hpp"
 #include "Component.hpp"
-
+#include "RandGen.hpp"
 RandomAdding::RandomAdding(FloatRect range) 
 	: m_range(range)
-{
-
-}
+{	}
 
 Component* RandomAdding::task(const Container* container, Component* component) {
-	float xRange = m_range.width - m_range.left;
-	float yRange = m_range.height - m_range.top;
+	RandGen rd;
 	Vector2f position(
-		fmod(rand(), xRange) + m_range.left,
-		fmod(rand(), yRange) + m_range.top
+		rd.randReal(m_range.left, m_range.width),
+		rd.randReal(m_range.top, m_range.height)
 	);
 	component->setPosition(position);
 	return component;

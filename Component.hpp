@@ -12,11 +12,7 @@ public:
 	Component();
 
 	Component(Shape* shape);
-	Component(ITransformable* transformable,IGaps* gaps) : 
-		transformable(transformable),
-		gaps(gaps),
-		shape(0)
-	{}
+	
 	Component(
 		Shape* shape,
 		ITransformable* transformable,

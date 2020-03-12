@@ -66,6 +66,7 @@ void Component::move(const Vector2f& offset) {
 void Component::rotate(float angle) {
 	setRotation(getRotation() + angle);
 }
+
 FloatRect Component::getLocalBounds()const {
 	Vector2f dim = shape->getDimension();
 	dim.x += gaps->getHorizontalGaps().total();

@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector2.hpp"
+#include "Adapter.hpp"
 class Shape {
 public:
 	virtual Vector2f getDimension() const = 0;
@@ -54,4 +55,9 @@ public:
 	void setRadius(float radius) {
 		m_radius = radius;
 	}
+};
+
+class AdapterShape : public Shape, Adapter<Shape&> {
+public:
+
 };

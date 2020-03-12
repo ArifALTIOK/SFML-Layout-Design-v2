@@ -69,7 +69,11 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)..\SFML_SDK\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\SFML_SDK\lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)..\bin</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -77,6 +81,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -126,6 +133,7 @@
     <ClCompile Include="LayoutManager.cpp" />
     <ClCompile Include="LeftToRightAdding.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RandGen.cpp" />
     <ClCompile Include="RandomBehaviour.cpp" />
     <ClCompile Include="RectangleComponent.cpp" />
     <ClCompile Include="Shape.cpp" />
@@ -149,6 +157,7 @@
     <ClInclude Include="Layout.hpp" />
     <ClInclude Include="LayoutManager.hpp" />
     <ClInclude Include="LeftToRightAdding.hpp" />
+    <ClInclude Include="RandGen.hpp" />
     <ClInclude Include="RandomBehaviour.hpp" />
     <ClInclude Include="Rect.hpp" />
     <ClInclude Include="RectangleComponent.hpp" />
