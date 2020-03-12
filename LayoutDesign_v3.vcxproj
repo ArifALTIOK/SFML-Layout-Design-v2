@@ -136,12 +136,17 @@
     <ClCompile Include="RandGen.cpp" />
     <ClCompile Include="RandomBehaviour.cpp" />
     <ClCompile Include="RectangleComponent.cpp" />
+    <ClCompile Include="SFMLComponent.cpp" />
+    <ClCompile Include="SFMLShape.cpp" />
+    <ClCompile Include="SFMLTransformable.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="TopToBottomBehaviour.cpp" />
     <ClCompile Include="Transformable.cpp" />
     <ClCompile Include="VerticalBorder.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Adapter.hpp" />
+    <ClInclude Include="AdapterComponent.hpp" />
     <ClInclude Include="Behaviour.hpp" />
     <ClInclude Include="BorderBehaviour.hpp" />
     <ClInclude Include="CircleBehaviour.hpp" />
@@ -162,14 +167,14 @@
     <ClInclude Include="Rect.hpp" />
     <ClInclude Include="RectangleComponent.hpp" />
     <ClInclude Include="RelativeBehaviour.hpp" />
+    <ClInclude Include="SFMLComponent.hpp" />
+    <ClInclude Include="SFMLShape.hpp" />
+    <ClInclude Include="SFMLTransformable.hpp" />
     <ClInclude Include="Shape.hpp" />
     <ClInclude Include="TopToBottomBehaviour.hpp" />
     <ClInclude Include="Transformable.hpp" />
     <ClInclude Include="Vector2.hpp" />
     <ClInclude Include="VerticalBorder.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

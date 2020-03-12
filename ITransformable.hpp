@@ -1,5 +1,6 @@
 #pragma once
 #include "Rect.hpp"
+#include "Adapter.hpp"
 
 __interface IReadTransformable {
 	virtual Vector2f getPosition()const = 0;
@@ -21,14 +22,9 @@ __interface ITransformable : IReadTransformable, IWriteTransformable {
 };
 
 template<typename Adaptee>
-class AdapterTransformable : public ITransformable{
-protected:
-	Adaptee transformable;
+class AdapterTransformable : public Adapter<Adaptee>, public ITransformable{
 public:
-	AdapterTransformable(
-		Adaptee transformable
-	) : transformable(transformable)
-	{}
+	using Adapter<Adaptee>::Adapter;
 };
 
 using DecaratorTransformable = AdapterTransformable<ITransformable*>;

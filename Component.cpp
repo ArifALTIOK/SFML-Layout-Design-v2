@@ -80,3 +80,8 @@ FloatRect Component::getGlobalBounds()const {
 	dim.y += gaps->getVerticalGaps().total();
 	return FloatRect(getPosition() - getOrigin(), dim);
 }
+
+Vector2f Component::getPreferredSize() const
+{
+	return shape->getDimension();
+}

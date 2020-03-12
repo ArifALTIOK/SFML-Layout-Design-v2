@@ -1,5 +1,5 @@
 #include "Container.hpp"
-
+#include <SFML/Graphics/RenderTarget.hpp>
 void Container::addComponent(Component* component) {
 	cout << __FUNCSIG__ << endl;
 	addComponent(component, getComponentCount());
@@ -64,5 +64,11 @@ Vector2f Container::getMinimumSize()const {
 
 Vector2f Container::getPreferredSize()const {
 	return Vector2f(0, 0);
+}
+
+void Container::draw(sf::RenderTarget & target, sf::RenderStates states) const
+{
+	for (Component* c : components)
+		target.draw(*c, states);
 }
 

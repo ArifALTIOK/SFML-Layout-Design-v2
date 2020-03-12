@@ -19,11 +19,11 @@ protected:
 	void removeComponent(size_t n);
 
 	void removeComponent(Component* component);
+
 	Component* getComponent(size_t n);
 
 public:
 	
-
 	size_t getComponentCount()const;
 
 	const Component* getComponent(size_t n)const;
@@ -36,4 +36,5 @@ public:
 
 	virtual Vector2f getPreferredSize()const;
 	
+	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

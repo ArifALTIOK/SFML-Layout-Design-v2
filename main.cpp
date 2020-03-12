@@ -1,67 +1,83 @@
 #include <iostream>
 #include "Layout.hpp"
 #include "LayoutManager.hpp"
-#include "Shape.hpp"
 #include "RandomBehaviour.hpp"
+#include "SFMLComponent.hpp"
 #include <SFML/Graphics.hpp>
 using namespace std;
-
-
-
-
-//class ShapeComponent : public Component {
-//	sf::Shape& shape;
-//public:
-//	ShapeComponent(
-//		sf::Shape& shape
-//	) : 
-//		shape(shape),
-//		Component(
-//			new ShapeTransformable(shape),
-//			new NoGaps)
-//		)
-//};
+#include "RandGen.hpp"
 int main() {
+
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Title");
-	sf::RectangleShape shape;
-	ShapeAdapter
-	shape.setFillColor(sf::Color::Red);
-	shape.setSize(sf::Vector2f(100, 100));
+	window.setFramerateLimit(24);
+	
+	Layout layout;
+	layout.setLayoutManager(new LayoutManager(
+		new RandomAdding(0,0,500,500),
+		new RandomRemove
+	));
+
+	RandGen random;
+	for (int i = 0; i < 12; i++) {
+		sf::RectangleShape* shape = new sf::RectangleShape;
+		shape->setSize(sf::Vector2f(50, 50));
+		int rand = random.randInt(3);
+		switch (rand)
+		{
+		case 0:
+			shape->setFillColor(sf::Color::Red);
+			break;
+		case 1:
+			shape->setFillColor(sf::Color::Green);
+			break;
+		case 2:
+			shape->setFillColor(sf::Color::Blue);
+			break;
+		default:
+			break;
+		}
+
+		SFMLComponent *c = new SFMLComponent(*shape);
+		layout.addLayoutComponent(c);
+	}
+
+	int counter = 0;
+	sf::Clock clock;
+	int direction = 1;
+	sf::Time t1;
+	sf::Time t2;
+	t1 = t2 = clock.getElapsedTime();
 	while (window.isOpen()) {
 		sf::Event event;
 		while (window.pollEvent(event)) {
 			switch (event.type)
 			{
-				case sf::Event::Closed:
-					window.close();
-				default:
-					break;
+			case sf::Event::Closed:
+				window.close();
+			default:
+				break;
 			}
 		}
-		window.clear();
-		window.draw(shape);
-		window.display();
+
+		if ((clock.getElapsedTime() - t1).asMilliseconds() > .1){
+			window.clear();
+			window.draw(layout);
+			window.display();
+			layout.move(direction, 0);
+			t1 = clock.getElapsedTime();
+		}
+		
+
+		if ((clock.getElapsedTime() - t2).asSeconds() > 2) {
+			direction *= -1;
+			layout.rotateAllComponent(45);
+			t2 = clock.getElapsedTime();
+		}
+
+		
+		
 	}
 
-
-	/*
-	Layout l(
-		new LayoutManager(
-			new RandomAdding(FloatRect(10,10,11,11)),
-			new DefaultBehaviour
-		),
-		20,80
-	);
-	
-	
-
-	for (int i = 0; i < 12; i++) {
-		Component* comp = new Component(new Rectangle({ 10,10 }));
-
-		l.addLayoutComponent(comp);
-	}
-	
-	l.print();*/
 	system("pause");
 	return 0;
 }

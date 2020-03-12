@@ -26,3 +26,10 @@ void Layout::addLayoutComponent(Component* component) {
 void Layout::removeLayoutComponent(Component* component) {
 	manager->removeContainerComponent(this, component);
 }
+
+void Layout::rotateAllComponent(float angle)
+{
+	size_t nComp = getComponentCount();
+	for (size_t i = 0; i < nComp; i++)
+		getComponent(i)->rotate(angle);
+}

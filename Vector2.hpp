@@ -44,6 +44,27 @@ struct Vector2 {
 		return *this = *this * rhs;
 	}
 
+	Vector2<T> operator/(const Vector2<T>& rhs)const {
+		return Vector2<T>(x / rhs.x, y / rhs.y);
+	}
+
+	Vector2<T> operator+(const T& value) const{
+		return *this +Vector2<T>(value, value);
+	}
+
+	Vector2<T> operator-(const T& value)const {
+		return *this -Vector2<T>(value, value);
+	}
+
+	Vector2<T> operator*(const T& value) const{
+		return *this * Vector2<T>(value, value);
+	}
+
+	Vector2<T> operator/(const T& value) const{
+		return *this / Vector2<T>(value, value);
+	}
+
+
 	T total()const {
 		return x + y;
 	}
@@ -66,3 +87,9 @@ struct Vector2 {
 };
 
 
+template<typename Src, typename Dest>
+struct Vector2Converter {
+	static Dest convert(Src src) {
+		return Dest(src.x, src.y);
+	}
+};

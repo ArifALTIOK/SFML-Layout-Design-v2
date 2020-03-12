@@ -57,7 +57,8 @@ public:
 	}
 };
 
-class AdapterShape : public Shape, Adapter<Shape&> {
+template<typename Adaptee>
+class AdapterShape : public Shape, public Adapter<Adaptee> {
 public:
-
+	using Adapter<Adaptee>::Adapter;
 };

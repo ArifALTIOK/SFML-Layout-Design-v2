@@ -1,9 +1,10 @@
 #pragma once
 #include "IComponent.hpp"
+#include <SFML/Graphics/Drawable.hpp>
 class Shape;
 class IGaps;
 using namespace std;
-class Component : public IComponent {
+class Component : public IComponent,public sf::Drawable{
 protected:
 	Shape* shape;
 	ITransformable* transformable;
@@ -44,6 +45,10 @@ public:
 	FloatRect getLocalBounds()const;
 
 	FloatRect getGlobalBounds()const;
+
+	virtual Vector2f getPreferredSize()const; // default shape->getDimension();
+
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states)const = 0;
 
 	void print()const {
 		cout << "Component -> " << getPosition() << " " << getOrigin() << " " << getGlobalBounds() << endl;
